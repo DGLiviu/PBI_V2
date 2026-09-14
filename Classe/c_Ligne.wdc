@@ -1,0 +1,482 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : c_Ligne
+ major_version : 27
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1b45bd04057d7b8c
+ internal_properties : BwAAAAcAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      c_Ligne est une Classe
+      	Prod est un entier
+      	ProdVerre est un entier
+      	Article est un entier
+      	Nom est une chaine
+      	Extérieur est une chaine
+      	Intérieur est une chaine
+      	Longueur est un entier
+      	Largeur est un entier
+      	Epaisseur est un numérique
+      	Profondeur est un numérique
+      	Embout est un numérique
+      	Retrait est un numérique
+      	Quantité est un entier
+      	ModeCalcul est une chaine
+      	AlvHorizontal est un entier
+      	AlvVertical est un entier
+      	Année est un entier
+      	Commande est un entier
+      	Ligne est un entier
+      	
+      	Epure est un entier
+      	
+      	tab_Cotes est un tableau de 10 numériques
+      	tab_Barres est un tableau de 0 par 27 numériques
+      	
+      	tab_Barre est un tableau de c_Barre 
+      	tab_Cote_PBI_H est un tableau de entiers
+      	tab_Cote_PBI_V est un tableau de entiers
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1965184637386783628
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1965184637386849164
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : CalculLongueur
+     procedure_id : 1967119283847323953
+     type_code : 12
+     code : |1+
+      PROCEDURE CalculLongueur(type)
+      
+      res est un réel
+      
+      si type = 0 alors
+      	res = :Longueur - (:Retrait + :embout)*2
+      sinon si type = 1 alors
+      	res = :Largeur  - (:Retrait + :Embout)*2
+      fin
+      
+      renvoyer res
+     type : 458752
+   -
+     name : CalculLongueur
+     procedure_id : 1967119283847323953
+     type_code : 12
+     code : |1-
+      PROCEDURE CalculLongueur()
+      
+      pos1, pos2, pos3, pos4 sont des entiers
+      
+      TableauSupprimeTout(:tab_Barres)
+      
+      pos1 = (:AlvVertical-1)*(:AlvHorizontal)
+      
+      si :AlvHorizontal = 1 ALORS
+      	POUR j = 1 _a_ :AlvVertical -1
+      		:Ajout_Barre(1,j,1,j,-1)
+      	FIN
+      sinon si :AlvVertical = 1 alors
+      	POUR i = 1 _a_ :AlvHorizontal -1
+      		:Ajout_Barre(1,i,1,i,-1)
+      	FIN
+      sinon
+      	pour i = 1 _a_ :AlvHorizontal -1
+      		pour j = 1 _a_ :AlvVertical -1
+      			pos1 += 1
+      			pos2 = pos1+1
+      			si pos3 = 0 alors
+      				pos3 = i
+      			sinon
+      				pos3 = (j-1)*:AlvHorizontal+1+(i-1)
+      			fin
+      			pos4 = pos3+1
+      			:Ajout_Barre(0,i,j,pos1,pos2,pos3,pos4)
+      			si j+1 = :AlvVertical alors :Ajout_Barre(0,i,j+1,pos2,0,0,0)
+      			:Ajout_Barre(1,j,i,pos3,pos4,pos2,pos1)
+      			SI i+1 = :AlvHorizontal ALORS :Ajout_Barre(1,j,i+1,pos4,0,0,0)
+      		FIN
+      		pos3 = 0
+      		pos1 +=1
+      	FIN
+      FIN
+      
+      nTemp,iTemp,ktemp est un entier
+      tabtemp est un tableau de 0 par 27 numériques 
+      
+      pour i = 1 _à_ TableauInfo(:tab_Barres,tiNombreLignes)
+      	si :tab_Barres[i][17] <= 0 alors
+      		tableauajouteLigne(tabtemp,:tab_Barres[i][1],:tab_Barres[i][2],:tab_Barres[i][3],:tab_Barres[i][4],:tab_Barres[i][5],:tab_Barres[i][6],
+      		:tab_Barres[i][7] ,:tab_Barres[i][8] ,:tab_Barres[i][9] ,:tab_Barres[i][10] ,:tab_Barres[i][11],:tab_Barres[i][12],:tab_Barres[i][13],:tab_Barres[i][14],:tab_Barres[i][15],:tab_Barres[i][16],:tab_Barres[i][17],
+      		:tab_Barres[i][18],:tab_Barres[i][19],:tab_Barres[i][20],:tab_Barres[i][21] ,:tab_Barres[i][22],:tab_Barres[i][23],:tab_Barres[i][24],:tab_Barres[i][25],:tab_Barres[i][26],:tab_Barres[i][27])
+      	sinon
+      		TableauAjouteLigne(tabtemp,:tab_Barres[i][1],:tab_Barres[i][2],:tab_Barres[i][3],:tab_Barres[i][4],:tab_Barres[i][5],:tab_Barres[i][6])		
+      		
+      		nTemp = 7
+      		pour j=16 a 7 pas -1 
+      			si :tab_Barres[i][j] > 0 _et_ :tab_Barres[i][1]-:tab_Barres[i][j] > 0 alors
+      				tabtemp[i][nTemp] = :tab_Barres[i][1]-:tab_Barres[i][j]			
+      				SI :tab_Barres[i][j+11] = 1 alors
+      					tabtemp[i][nTemp+11] =	10
+      				sinon si :tab_Barres[i][j+11] = 10 ALORS
+      					tabtemp[i][nTemp+11] =	1
+      				sinon 
+      					tabtemp[i][nTemp+11] = :tab_Barres[i][j+11]
+      				FIN
+      				nTemp ++
+      			FIN
+      		FIN
+      		tabtemp[i][nTemp] = :tab_Barres[i][1]
+      	FIN
+      FIN
+      
+      TableauSupprimeTout(:tab_Barres)
+      
+      pour i = 1 _a_ TableauInfo(tabtemp,tiNombreLignes)
+      	SI tabtemp[i][1] > 0 ALORS
+      		iTemp = 0
+      		POUR k =7 _a_ 16
+      			SI tabtemp[i][k] = tabtemp[i][1] ALORS
+      				iTemp = k
+      				SORTIR
+      			FIN
+      		FIN
+      		si iTemp = 7 alors
+      			pos1 =  TableauCherche(:tab_Barres,tcLinéaire,"1;2;4",tabtemp[i][1],tabtemp[i][2],tabtemp[i][4])
+      		sinon
+      			pos1 = TableauCherche(:tab_Barres,tcLinéaire,"1;2;4;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27",tabtemp[i][1],tabtemp[i][2],tabtemp[i][4],
+      				tabtemp[i][7] ,tabtemp[i][8] ,tabtemp[i][9] ,tabtemp[i][10] ,tabtemp[i][11],tabtemp[i][12],tabtemp[i][13],tabtemp[i][14],tabtemp[i][15],tabtemp[i][16],tabtemp[i][17],
+      				tabtemp[i][18],tabtemp[i][19],tabtemp[i][20],tabtemp[i][21] ,tabtemp[i][22],tabtemp[i][23],tabtemp[i][24],tabtemp[i][25],tabtemp[i][26],tabtemp[i][27])
+      		FIN
+      		si pos1 = -1 alors
+      			pour j = 1 _a_ TableauInfo(:tab_Barres,tiNombreLignes)
+      				si tabtemp[i][1]=:tab_Barres[j][1] _et_ tabtemp[i][2]=:tab_Barres[j][2] _et_ tabtemp[i][4]=:tab_Barres[j][4] alors
+      					si iTemp > 0 ALORS
+      						ktemp = 0		
+      						pour k = 7 _a_ iTemp-1
+      							ktemp ++
+      							si :tab_Barres[j][k] > 0 _et_ tabtemp[i][1] - tabtemp[i][k] = :tab_Barres[j][iTemp-ktemp]  alors
+      								si  (tabtemp[i][k+11] = 10 _et_ :tab_Barres[j][iTemp-ktemp+11] = 1 ) _ou_
+      									(tabtemp[i][k+11] = 1  _ET_ :tab_Barres[j][iTemp-ktemp+11] = 10) _OU_
+      									(tabtemp[i][k+11] = 11 _ET_ :tab_Barres[j][iTemp-ktemp+11] = 11) alors
+      									pos1 = j
+      								sinon 
+      									pos1 = -1
+      									SORTIR									
+      								FIN
+      							sinon
+      								pos1 = -1
+      								SORTIR
+      							FIN
+      						FIN
+      					FIN
+      				FIN
+      				si pos1 > 0 alors
+      					sortir
+      				FIN
+      			FIN
+      		FIN
+      		
+      		si pos1 = -1 alors
+      			pos1 = TableauAjouteLigne(:tab_Barres,tabtemp[i][1],tabtemp[i][2],1,tabtemp[i][4],0,0)
+      			pour j = 7 _A_ iTemp-1
+      				:tab_Barres[pos1][j] = tabtemp[i][j]
+      				:tab_Barres[pos1][j+11] = tabtemp[i][j+11]
+      			FIN
+      		sinon
+      			:tab_Barres[pos1][3] ++
+      		FIN
+      	FIN
+      FIN
+      
+      tableautrie(:tab_Barres,ttDécroissant,1)
+     type : 458753
+   -
+     name : Ajout_PBI_axés
+     procedure_id : 2144453247943685008
+     type_code : 12
+     code : |1-
+      PROCEDURE Ajout_PBI_axés()
+      
+      Longueur_vitre, Pos_barre est un reel
+      
+      TableauSupprimeTout(:tab_Cote_PBI_H)
+      TableauSupprimeTout(:tab_Cote_PBI_V)
+      
+      SI :AlvVertical > 1 ALORS
+      	Longueur_vitre = (:Longueur-:Retrait*2-:Profondeur*(:AlvVertical-1))/:AlvVertical
+      	POUR i=1 _a_ :AlvVertical-1
+      		SI i = :AlvVertical-1 ALORS
+      			Pos_barre = (:Longueur - Arrondi(Longueur_vitre+:Retrait+:Profondeur*0.5,1))*10
+      		SINON
+      			Pos_barre = Arrondi((Longueur_vitre*i+:Retrait+:Profondeur*(i-0.5)),1)*10
+      		FIN
+      		TableauAjoute(:tab_Cote_PBI_H,Pos_barre)
+      	FIN
+      FIN
+      
+      SI :AlvHorizontal > 1 ALORS
+      	Longueur_vitre = (:Largeur-:Retrait*2-:Profondeur*(:AlvHorizontal-1))/:AlvHorizontal
+      	POUR i=1 _a_ :AlvHorizontal-1
+      		SI i = :AlvHorizontal-1 ALORS
+      			Pos_barre = (:Largeur - Arrondi(Longueur_vitre+:Retrait+:Profondeur*0.5,1))*10
+      		SINON
+      			Pos_barre = Arrondi((Longueur_vitre*i+:Retrait+:Profondeur*(i-0.5)),1)*10
+      		FIN
+      		TableauAjoute(:tab_Cote_PBI_V,Pos_barre)
+      	FIN
+      FIN
+      
+      LecturePositionCroisillon(Objet)
+      
+      TableauTrie(:tab_Cote_PBI_H)
+      TableauTrie(:tab_Cote_PBI_V)
+      
+      :DefinitCoordonneesPBI()
+      
+      LectureSuppression(objet)
+      :CalculLongueur()
+      
+      si EnModeTest() ALORS
+      	trace("---",:Prod,"---")
+      	pour i = 1 _a_ :tab_Barres.Info(tiNombreLignes)
+      		si :tab_Barres[i][1] > 0 alors
+      			trace(:tab_Barres[i][2],:tab_Barres[i][4], NumériqueVersChaîne(:tab_Barres[i][1],".1f"), :tab_Barres[i][3],:tab_Barres[i][17])
+      			trace("      ",:tab_Barres[i][7],:tab_Barres[i][8],:tab_Barres[i][9],:tab_Barres[i][10],:tab_Barres[i][11],:tab_Barres[i][12],:tab_Barres[i][13],:tab_Barres[i][14],:tab_Barres[i][15],:tab_Barres[i][16])
+      			Trace("      ",:tab_Barres[i][18],:tab_Barres[i][19],:tab_Barres[i][20],:tab_Barres[i][21],:tab_Barres[i][22],:tab_Barres[i][23],:tab_Barres[i][24],:tab_Barres[i][25],:tab_Barres[i][26],:tab_Barres[i][27])
+      		FIN
+      	FIn
+      FIN
+     type : 458752
+   -
+     name : DefinitCoordonneesPBI
+     procedure_id : 2144516847819531908
+     type_code : 12
+     code : |1-
+      PROCEDURE DefinitCoordonneesPBI()
+      
+      barre est une c_barre
+      nb_barre_V, nb_barre_H est un entier
+      nb_barre_V = TableauOccurrence(:tab_Cote_PBI_V)
+      nb_barre_H = TableauOccurrence(:tab_Cote_PBI_H)
+      pDebut, pFin sont des entiers
+      
+      TableauSupprimeTout(:tab_barre)
+      
+      //Barres horizontales
+      barre.sens = "H"
+      POUR i=1 _À_ nb_barre_H
+      	barre.num_PBI = i
+      	POUR j=1 _À_ nb_barre_V+1
+      		barre.num_barre = j
+      		SI j=1 ALORS 
+      			pDebut = 0 
+      		SINON 
+      			pDebut = :tab_Cote_PBI_V[j-1]
+      		FIN
+      		SI j <= nb_barre_V ALORS
+      			pFin = :tab_Cote_PBI_V[j] 
+      		SINON 
+      			pFin = :Largeur*10
+      		FIN
+      		//SI TableauCherche(:tab_barre_suppr,tcLinéaire,"sens;num_PBI;num_barre",barre.sens,barre.num_PBI,barre.num_barre) > 0 ALORS barre.est_supprimé = Vrai SINON barre.est_supprimé = Faux
+      		barre.dim = pFin-pDebut
+      		TableauAjoute(:tab_barre,barre)
+      	FIN
+      FIN
+      
+      //Barres verticales
+      barre.sens = "V"
+      POUR i=1 _À_ nb_barre_V
+      	barre.num_PBI = i
+      	POUR j=1 _À_ nb_barre_H+1
+      		barre.num_barre = j
+      		SI j=1 ALORS 
+      			pDebut = 0 
+      		SINON 
+      			pDebut = :tab_Cote_PBI_H[j-1]
+      		FIN
+      		SI j <= nb_barre_H ALORS 
+      			pFin = :tab_Cote_PBI_H[j] 
+      		SINON 
+      			pFin = :Longueur*10
+      		FIN
+      		//SI TableauCherche(:tab_barre_suppr,tcLinéaire,"sens;num_PBI;num_barre",barre.sens,barre.num_PBI,barre.num_barre) > 0  ALORS barre.est_supprimé = Vrai SINON barre.est_supprimé = Faux
+      		barre.dim = pFin-pDebut
+      		TableauAjoute(:tab_barre,barre)
+      	FIN
+      FIN
+      
+      TableauTrie(:tab_barre,ttMembre,"sens;num_PBI;num_barre")
+     type : 458752
+   -
+     name : Ajout_Barre
+     procedure_id : 2150002276962986668
+     type_code : 12
+     code : |1+
+      PROCEDURE ajout_Barre(Sens,Barre,Alv,O,P,Q=0,R=0)
+      
+      Lecture est un entier
+      Fini est un entier
+      Coupe est un entier
+      Percage est un entier
+      Pos est un entier = TableauCherche(:tab_Barres,tcLinéaire,"4;5;6",Sens,Barre,Fini)
+      DimO est un réel = :tab_Barre[O]:dim/10
+      Valeur est un réel
+      bpos,bPos2 est un booléen
+      nBarre est un entier
+      
+      si Alv = :AlvHorizontal alors
+      	Lecture=Lecture
+      FIN
+      
+      si Pos > 0 alors
+      	pour i = 16 _a_ 7 pas -1
+      		si :tab_Barres[Pos][i] > 0 alors
+      			nBarre = i-6
+      			sortir
+      		FIN
+      	FIN
+      FIN
+      
+      //Barre seule
+      si P = -1 alors
+      	bpos = Vrai
+      	Valeur = -(:Retrait + :Embout)*2
+      sinon
+      	PréO est un booléen = vrai
+      	PréP est un booléen = Faux
+      	PréQ est un booléen = vrai
+      	PréR est un booléen = vrai
+      
+      	SI O > 0 ALORS PréO = pas :tab_Barre[O]:est_supprimé
+      	SI P > 0 ALORS PréP = pas :tab_Barre[P]:est_supprimé
+      	SI Q > 0 ALORS PréQ = pas :tab_Barre[Q]:est_supprimé
+      	SI R > 0 ALORS PréR = pas :tab_Barre[R]:est_supprimé
+      	
+      	SI PAS PréO ET PAS PréP ET PAS PréQ ET PAS PréR ALORS //  //	
+      		si Pos > 0 alors
+      			DimO = 0
+      			bpos = Vrai
+      			Fini = 1
+      		FIn
+      	SINON SI PréO ET PréP ET PAS PréQ ET PAS PréR ALORS // │ //	
+      		bpos = Vrai
+      		SI Alv = 1 ALORS Valeur = -(:Retrait + :Embout)
+      	SINON SI PAS PréO ET PAS PréP ET PréQ ET PréR ALORS // ─ //	
+      		SI Pos > 0 ALORS
+      			DimO = 0
+      			bpos = Vrai
+      			Fini = 1
+      		FIN
+      	sinon SI PréO ET PréP ET PréQ ET PAS PréR ALORS // ┤ //	
+      		bpos = Vrai
+      		Percage = 10
+      		
+      		SI Alv = 1 ALORS Valeur = -(:Retrait + :Embout)
+      	SINON SI PréO ET PréP ET PAS PréQ ET PréR ALORS // ├ //	
+      		bpos    = Vrai
+      		Percage = 01
+      		
+      		SI Alv = 1 ALORS Valeur = -(:Retrait + :Embout)
+      	SINON SI PréO ET PAS PréP ET PréQ ET PréR ALORS // ┬ //	
+      		bpos = Vrai
+      		Fini = 1
+      		
+      		SI (Alv DANS (1,:AlvVertical) ET Sens = 0) _OU_ (Alv DANS (1,:AlvHorizontal) ET Sens = 1) ALORS Valeur = -(:Retrait + :Embout)
+      		SI (Alv <> :AlvHorizontal ET Sens = 1) ALORS 	
+      			Percage = 01
+      			Lecture = -1
+      		FIN	
+      		SI (nBarre <> :AlvVertical-1 ET Sens = 0) _OU_ (nBarre <> :AlvHorizontal-1 ET Sens = 1) ALORS
+      			Coupe   = 1
+      		FIN
+      		SI (Alv <> :AlvVertical ET Sens = 0)_OU_ (Alv <> :AlvHorizontal ET Sens = 1) ALORS
+      			Valeur += - :Profondeur/2 + :Epaisseur
+      		FIN		
+      	SINON SI PAS PréO ET PréP ET PréQ ET PréR ALORS // ┴ //	
+      		bpos    = Vrai
+      		Valeur += - :Profondeur/2 + :Epaisseur
+      		Percage = 10
+      		Lecture = 1
+      		DimO    = 0
+      		Coupe   = 1
+      	SINON SI PréO ET PréP ET PréQ ET PréR ALORS // ┼ //		
+      		bpos = Vrai	
+      		SI Alv = 1 ALORS 
+      			Valeur = -(:Retrait + :Embout)	
+      		sinon si Sens = 1 et Pos = -1 alors
+      			Valeur += - :Profondeur/2 + :Epaisseur
+      		FIN
+      		SI Sens = 1 ALORS 	
+      			Valeur += - :Profondeur/2 + :Epaisseur
+      			Fini    = 1
+      			Coupe   = 1
+      			bPos2   = vrai
+      		SINON	
+      			Percage = 11
+      		FIN
+      	FIN	
+      
+      FIN
+      
+      si bpos alors
+      	j est un entier
+      	SI Pos = -1 ALORS
+      		Pos = TableauAjouteLigne(:tab_Barres,DimO + Valeur,Coupe,0,Sens,Barre,Fini)
+      	SINON
+      		:tab_Barres[Pos][1] += DimO + Valeur
+      		:tab_Barres[Pos][6]  = Fini
+      		si :tab_Barres[Pos][2] = 0 alors :tab_Barres[Pos][2]  = Coupe
+      	FIN
+      	POUR i = 7 _À_ 16
+      		SI :tab_Barres[Pos][i] <= 0 ALORS
+      			:tab_Barres[Pos][i] = :tab_Barres[Pos][1]
+      			j = i + 11
+      			SORTIR
+      		sinon si :tab_Barres[Pos][i] > :tab_Barres[Pos][1] alors
+      			:tab_Barres[Pos][i] = :tab_Barres[Pos][1]
+      		FIN
+      	FIN
+      	:tab_Barres[Pos][17] += Lecture
+      	si j > 0 alors
+      		:tab_Barres[Pos][j] = Percage
+      	FIN
+      FIN
+      
+      SI bPos2 ALORS
+      	TableauAjouteLigne(:tab_Barres,-:Profondeur/2 + :Epaisseur,Coupe,0,Sens,Barre,0)
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BwAAAAcAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1b45bcd1057ab58c
+  internal_properties : BwAAAAcAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BwAAAAcAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

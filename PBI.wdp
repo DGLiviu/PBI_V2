@@ -1,0 +1,223 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : PBI
+ major_version : 27
+ minor_version : 0
+ type : 4097
+ description : ""
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : PBI
+    internal_properties : BwAAAAcAAABIz27Ly/4eGEJR+nXYQYS8PzJtXZmN8GBZugojUE5rR9wKLvIk9GlbN59KcS/+4q7BPdLeNTyNZZpva+1v8h8JeClqzni1YVs8wkqU+vh2Px1vt+L5dkYxpup1Fqezl4TJHW8zqmi/MyTG8fSk0BWGqlo+sT4k/UI31XRoXbr0407lHmk/CiyohFiGPxU1zQZGV6KlhDgDKbmtiK1w06URMN9/X6kkZ7J2369ta2Q94E9jbEyD3mIr1cvvAhLucUXCGA/0yqE9zT551LmSJLvh9fSZds6FvHYMPaQuz9EqrbYo/IFRVsmjicos3Ot92CMLPxEITdwMC6TW5645T+ImZYax4jbLSmLLvKmK4gAapHS6q61AenN+XTlqQnQkE8d8xDbPbMtY1sTdwZnD8a1LNmRB5RsgLyIOdIvCU39HGJnVU2UympV17KmbhtahW19ua8ERpJS/VNIxvOJudJl36FTe4sHj1SByOLwhQx2HRa5I57JBIz2si/slPNX0Olty/GUzbyUrjhz1TGQBfFO+vLfimMOWUo8dtEJNm6ZaBugzrSs5l5MocPNeS+wsbsjbarJ01kaD5qfmIpOD94eQftMyFLdMGEFl8zAA8TNDW0b8260uzCN6uFc+kCPNOROPrFqQHTGg/To1SDurCCcdybxTq2D2ii5pWowGi5BUxqLSbCfx/Zh3wsg2UWsalcsmfU2+Z4UBnebx1pUJi6Wa65jEBKXlnV6Xgitj4TSOhDTywI8ZrW9OehviKskyewN3We96stLKgkGMwG4Fj5/hBxPzYJch22lFfWXxDrA8FlHGICTcyEFx2beSDa5FXPO1/VKh/DAuZBq2k3SesXBtZXabU5X5gA8uav9s72ml2FrSjZA78QEEF4Xk4M0v3ffqTSNsEFEQLsi8JnMZIjIsI7Da2Alj3wuVYKaPa7yoGqG5arTDaqH6WkkaifnE7TIXjlmfgGxCylihBQv6UmtzZ0kM92Kl70PXtzmfIXYospvpFolmEi74pWP1krUcnBbi70UPJ8vJdHrBdUDjmJyKG0veE/IOEUfVXDWEdCxakxrrfefn2FjJ8/I14XlmGMWR9NCvTBRVkcq9fwUGGZ9ZmDGn00L6awNUFCFwOZ0tcF50TPqEUlDaOh2esktTcDi5w3P/cdWynE2jb29i9lCtKLZ6sbTQL9Okjy/6N+6DwHFyRiX+97wbhQ8/71AkIG49BthrOjhYKs5cSmuLbG/aqAsMfm+lcfE7DoaqBuPWh8wUakIDfDQmRXtWrsjBsUmrNgWFgxVsh45daaJSjd7/eScdZXHVRokQyjy+i6e+sAFFCGR486jF4ykYHKZZiyKxIr/QGSWtXTrkldxMPlQkb2eH+F1dsUlUGSkASWtuIr4dXeZIte1w7du67pTC0Zcb4BpNtuwVxwr2wF8+d7VAVBaG31Dy/LFX7unlxQmgC13A2VeORVaBWztiltdDpsv1qwpg0oC/UbcljBPt6kI2E0uUP++oYGbzpwJ3d7sH8otTWUg5dEeqbK+k1SUoJMGfbs+UL6J6t2Cyb5ZISwEp+kt4NiWynM/T3zlZfHzWjYiyMhWr3f1weB+06UR7HOlhE0Ygo9s27WPcT3oPoyH+T7qiRk/+rBB1e1U6tC8Qfq2mJGDEbr08NvXnIS8x0Cz/HFNkPIrq04Ue9uddgQ1ukoXRbaCajwtoihkceO208V2R/ilExpo4rifK5wKfI6c5hA4ACjg3rBiMA1F81PRfCwi9aE0T2NjmDDmy+zOn/Y4IwxxlU79v6xvtfsvZVRji6MJA/FyakSw5eqJeAEc0wtFXtUtoB2rZUMcT42f4gRX8bbO15X6+Bvwi6LVyftoZWY7VIGDbg5IaUQprYjFzfZpjc0qBYHa/hk0JFjrmp3hdv/JrMNnC0et+kSW4Of6h+kVMAUmCipF8GQa2UsISxWPr7gAp7z8eHvqlHfa5x0ZPq1bEOERaD6WK37fMb8Ek4u0iPf3k1x5nNfBk+VfiyQ+9PYpM81Qe4BVsVNVqLvxg2e8za5y5azhnB0tHjB4yTr30yDtnbGAXAWiYUn8OZ+scF5iNG4/ICkX8NGoaA52hQuF4qNMDs7COSaVkSgbGRVJ+x3NNNnA0GzSOz/a0MScM+Nx3xPy5DOHsfOnkrT9TnynSaV84iyrALc9Jxf+g4mtz5VrcLPzcXpKOG0UY7fdlvZtxGB4L2zHeo2zCtaRiZ3t+hld5KiM6msQARwdYWGb9VgKxVNyxtlcvOYMS3PJxarSVAQB062FhKz9XgHhZBGr1lPMHuvdAAYMEDxGk3Ki1zyKVMqDrr4QugEKEci0rJo6gnLhq52QGdiFy58dKEUbTRR2T9HHBBqp+x+e+IhxNVv9R8gVdzcZfKUXfWlSyGJhMIlNyDGe5lkEFMwOitLQIuOcLi7o+XAJt8Xhx3IC9l/Tm032j/2lLC5svS8hhUmkPEXq+TpMI7iupA5ZTcZPFtoS0V5IAJL7eWl0GjHWynOKmnHla9+CVms9MxPRWHnnmRAeEdprGEWIGFvaJlXoIZSN0tIsFH+zAreHRgp41kwx159ugTXWCKfHUdKv9mcQ3GMRVzFCxnHMMIPLJDrEyvSGTac2xusdWc4SRhdroEsmXiUTRS2KRczjGMt8UAwrMo4hwIVc81q3agmlg9ErpKFz8JkFhlzT3iPW8Gio92kcclsOzLIGMUmFoYIG0By6htPWcgJ/mz8dyuylK6G0C6BjO/RpMqGPysRufN8i7stBZP+gRdIlkCYmRFHLptBhmJ7LkiHZjBq3ag6R4rPbTcGHiVNUWfRWQHWryesa6Kca9YUZB59yXaJiEFfkg5bDl/DyyQCDwqdtczDoQYOzbMuHi2+RBGmVIYoC4dY9Me2RZAHn3095wPB62gchC5UAlt9Ce8lKHqu3yisWeIBh90BD6teXshk2mimxMl18IxlTSa+TtvE9hKWid1gP95cPRf/7Z2DWnRwp2/5BAiViHoXq9mpC9JkmcZEK3wKceQ1u+W1TuMm85gMX6EWqyNTy0/XN98u+5h6g6eHqqXBA3NEI/8CrNQMPYpJwCXS8AbTDElorjmZ1HhFUY4CBbUY7fE/g2T9n1rNaJ8FiHqg+O18S9mkM79BK/GE73FU9zWnBFKAt2RleIkR/tsxJ6S9GkVMk+W1SqfZYCGrz48BTM9fwGezj0AxCkPZ67o357MtywFV66fBy/FpZ22u4ClQNK5umDmGm81zCFvw9E/sf/FoyXKBKxKv/NElrwkJlyyVDoFYPakmdS5cAC4lAt4sJH4Vc7aLWXstFhUyokmpGPtK7ZFsElmPqQ8YX6Aic9dE7rtJygsC28W4sqWkWHXEVMDJEJTmO8TzeFV7Bqll9NivXVoqSOmW9j/OBOfk0ojxXVbuGSurDDhmEdRNawjRMHSUBs6tJ2OUxyulJwjGx4ZeyjDA1r6D6cFdjzPgvc+4hdngKXDS6wRd0VV+NBWk6AaOqYGWJCBRvAPGqYJ9nxsimIQb75TNNzTBh0AkCYJ7iaZ8KYlL/E38JMGASc+zhwaN7UrbVUdw9FGw4J8+AoCa25drLPlmg2+yL1I96FzF49mHCEnBeSk8+mFho8offvaeuJOuftwCTZ82u6ZD1JhH5Yufkj0vcZVhcSLh5IZ/LXoOpxh+3c6zw/qynPnoIoeHgDOGU6rcNPXeoldd+3oh/wIVdJWjqSXwArg1wjCvCpRK4vbSwawWBAEBw54km3gTLcRXI8x62vPVAb7ZUxrJfXOOKV1LwcNZpXXYRWXRPiTZ9QrKL/iFpcoCt/euz7qapMaUgzpvp3Ef5t6QaH6Cnql5rnNEzFvq4FoeFAw3jA55BkALLj7sWG9JKBAiBnndZB5jPuPVXEaI5N/XEmAzYuz0Xgfc2kBUohMQ4nTvpQx0sCcthD1NZe7p0B1FuGmtMc2Up4q7PQRBPu/vxAdWX5YpHMh9xxSvpKgIR73kZ7shBXI/YL0CT7ybE93oAESEPeh1zlMHpaYkbSKicPIhaoBbUnaAnjqH+ZSfp7HrlqRRdavjyJGo/4bNJDhCujeWsEKSONCB9Zy6uWgvA80zBAffY488hLzFkUFAxlKRxs1R9Aev699G42qlTBfurpOzPGh2aedUSRA/KQ3tTanQvgsVGcKTEE4Z/75Wfgq18sD/V1S1YcU9Q4iPwhsL2aWtqmBz/VDNl+IhTQSL9BENswcX/uIy7AbWsBEx0vvi7a7w0F13tppgRkGAQh+meq7mdj7ElQU5loTKAO6pNg7x2B2Moy2qqV1jH87X2RBBATQVG5qLLPPLyYOV6CqvB8TMI+w58FQ9MXafGdT+2MmXppyn8QBdbSIcZKa0NoT0Oeb2UcjajpFNYrpuH+s3/qMii3yKmwx2RxTxhVQ5JQjd2xSjF3Trbqb8D1V9ScHpyFlqpNozLBZopacl6SoYyvwfZT9B5zNlHzpVkzIMzt3/31mQ/70rLp7fFfq4idBKP3duvQQhz11tLWVvO4qcoM/C2Jdou2tQzLDmhyHpzmHSZuNw91IiG6ekoc1kxZBLiJQb1ANf+4A6SBV8zm8b93GUtlBqWjikkcjaPNHSEovbZ6ciI5RIMmjtG1LfaHXkh25dV+rIeZyp11Wx/abTmeUsivt3fTGjfVFEuAvCiceBKQnQrPvA25roM2Ojer1hh7uIjwDAs/3l6hL+v+XYJzCuLKVgZeedDuEDn84lb+xbV9is2HGTKRjoKGJ4Uo/6gwtmINlFdKH1ZPIRaA58yGptb3V5OiQY8tRCBwKXo0wnagFJBlJiMOz2HIIZjBEyupUcjbxj3gJ87dRHIUxp0pi8BDAAygSzbT0WFDAYQKm2/EqBog5/X2b41a0kXdRNUwA3w6CkSG/elz9QhJhHGxe/Wl+r+Z7JFV76sGQAXPvvh1Yia4DWDHwBWTLtXT7TNhIgiEnGsiewEHhTGXB6E3Pa34pOoKOLXqZ+qOYVxfoplHbJD/OoHNseiVaM7lTwpfhxBByQ==
+    configuration_id : 4036711951341765310
+    type : 1
+    generation_directory : .\Exe\PBI
+    generation_name : PBI.exe
+    version :
+     major_version : 2
+     generation_version : 14
+     internal_generation_version : 16
+    icon_filename : .\Fenetres\Croisillons_128_1.ico
+    language : 1
+ elements :
+  identifier : 0x4d26cf880205f2fc
+  elements :
+   -
+     name : gProcedure_FichiersHF
+     identifier : 0x49bf999e00053d82
+     internal_properties : BwAAAAcAAAAIBnAsm8Boc34Vrx+BcuYdgPfvp4D4rsmPvBRojpr6Fv7gwr/yDhEeGwP9+7s1zcMNFQ==
+     physical_name : .\Procedures\gProcedure_FichiersHF.wdg
+     type : 7
+   -
+     name : gProcedure_UtilisateurSociete
+     identifier : 0x4d26d918029c4c25
+     internal_properties : BwAAAAcAAAD5VSFlQj93eMFsdkJUJ/8+ldagcElscYevNHCim38X+d/N26Yf2eZ1opoE/IR8BPTcZA==
+     physical_name : .\Procedures\gProcedure_UtilisateurSociete.wdg
+     type : 7
+   -
+     name : gProcedure_InitProjet
+     identifier : 0x49bf99a600085ace
+     internal_properties : BwAAAAcAAAA3Ex8DoJ2VlqMKqGC6Qu2A34LedrxQXp62EX7aq558tEDMNM35BwgXADiiHuYa5toiIg==
+     physical_name : .\Procedures\gProcedure_InitProjet.wdg
+     type : 7
+   -
+     name : FEN_BonPBI
+     identifier : 0x4b45ad730f58acf5
+     internal_properties : BwAAAAcAAAC2nJ6CIR4WGUn5i+Uk8N1gqjlx+dXz6up3Q/H821BElKReW1EaPWYzirkjnWWbZ1mjow==
+     physical_name : .\Fenetres\FEN_BonPBI.wdw
+     type : 2
+   -
+     name : gProcedure_Connexion
+     identifier : 0x46796aae00559d4c
+     internal_properties : BwAAAAcAAADSKAoerZqSTRQ/DLSB4V6bcD3PR2yrwg6y0oQuLfmbtQPveZS8TPJMNe3XIeEf2803Pw==
+     physical_name : .\Procedures\gProcedure_Connexion.wdg
+     type : 7
+   -
+     name : FEN_choixSociete2017
+     identifier : 0x48773b6700ad903d
+     internal_properties : BwAAAAcAAAA3Ex8DoJ2VlqVAUDha+gA3eRig+FG80+Z2hbKFRqJwmFDgXyGNs/RLAjiiHuYa5toiIg==
+     physical_name : .\Fenetres\FEN_choixSociete2017.wdw
+     type : 2
+   -
+     name : gProcedure_Parametre
+     identifier : 0x4885fa750227b973
+     internal_properties : BwAAAAcAAADAvjhkQzhwq4hhGoV5aRaGXjOtDbQtCF+J13i6eZ99a0mljisP6wo41Uu1A4N9BfvFTQ==
+     physical_name : .\Procedures\gProcedure_Parametre.wdg
+     type : 7
+   -
+     name : gProcédure_Societe
+     identifier : 0x48e4af21005e4ae7
+     internal_properties : BwAAAAcAAACno4+TEE3lhlWtHuimPzBXI6biOpeva0uuM+sO5gIQ+PTIHT0ukl9o8iiSbjaqVkqysg==
+     physical_name : .\Procedures\gProcédure_Societe.wdg
+     type : 7
+   -
+     name : c_Ligne
+     identifier : 0x4b45bd860f8b7902
+     internal_properties : BwAAAAcAAACEguzI96wEJ1sHPQ6iIcrhoCO/Fx+dczavFZxge6D89MAO9AVxXtjVaMcxjxfJsSeRkQ==
+     physical_name : .\Classe\c_Ligne.wdc
+     type : 4
+   -
+     name : gProcedureSQL
+     identifier : 0x4b45c80c0fbd9349
+     internal_properties : BwAAAAcAAADjX9vP/KkBGkz8vcGZKj/LSWoElC5EsjFBQqJlYLtT9RvBhg2hrv46jbwmkhLOqh7mbg==
+     physical_name : .\Procedures\gProcedureSQL.wdg
+     type : 7
+   -
+     name : c_Bon
+     identifier : 0x4b45be520fb7942c
+     internal_properties : BwAAAAcAAACc+vQgn8RsfxPP9h4st603bENLIydNd/5UgOyKqWIqPo4ADJgi9Z0doI8J978xyT+JiQ==
+     physical_name : .\Classe\c_Bon.wdc
+     type : 4
+   -
+     name : FEN_Parametre
+     identifier : 0x4b4f0b31114f75fc
+     internal_properties : BwAAAAcAAADTLwsfrJmRSrwmjF6hysMIzfhERHQyE9BOr5/e/xx+WuYKjPlrrqO8PezWIuIe2s42Pg==
+     physical_name : .\Fenetres\FEN_Parametre.wdw
+     type : 2
+   -
+     name : gProceduresGlobales
+     identifier : 0x4c6aaa82007f944c
+     internal_properties : BwAAAAcAAAB/2cX/oOCpgK5YBfzCIqMPDJs4Qq4mtznvJ4E0AV0kWhu+KFfFfYaVsW8GRl8Fgmn6
+     physical_name : .\Procedures\gProceduresGlobales.wdg
+     type : 7
+   -
+     name : c_Barre
+     identifier : 0x4dc3d38200e58568
+     internal_properties : BwAAAAcAAACwjug086gAG0l5rzZ7W3BlBld95W2fjxanRk2F2CXvcZOTleD0FH61jrslkxPNtSuVnQ==
+     physical_name : .\Classe\c_Barre.wdc
+     type : 4
+  other_elements : []
+  analysis : .\PBI.wd23\PBI.wda
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ common_generation_directory : true
+ languages :
+  - fr-FR
+ wd_style_sheet : ".\\ModeleProjet_init.sty\r\n.\\GPAO_V2.sty"
+ wb_style_sheet : .\ModeleProjet_init.wws
+ url_rewriting :
+  internal_properties : BwAAAAcAAADkPzcUdUUS7wCiun+MCjqYH70RJdzkSv/nRvXZ3ENdikMa6bcHtsAH
+ code_elements :
+  internal_properties : BwAAAAcAAACyo+AGPHs6tl+CMW8i1j+hisKclwORtfzp4tr+6B34gnEg+AegA2o6CeaiNwKFgQlNnqdA
+  type_code : 0
+  p_codes :
+   -
+     code : |1+
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      //---Declaration CONSTANTES
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      csNomFichierCommun est une chaîne									//Nom du fichier où sont stockées les informations communes (DevGlass)
+      csNomApplication est une chaîne										//Nom de l'application
+      csNomFicIniApplication est une chaîne								//Nom du fichier .ini de l'application
+      
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      //---INIT CONSTANTES
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      csNomFichierCommun="DevGlass"
+      csNomApplication="PBI"
+      csNomFicIniApplication = csNomApplication + ".ini"
+      
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      //---Declaration Globales
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      GLOBAL
+      	gsCheminDossierWindev est une chaîne
+      	gsCheminDossierCommunIni est une chaîne								//Nom du dossier .ini commun pour tous les fichiers ini
+      	gsCheminDossierHFCommun est une chaîne								//Emplacement des fichiers HyperFile de DevGlass (communs aux applications WinDev)
+      	gsCheminDossierHFApplication est une chaîne							//Emplacement des fichiers HyperFile specifiques a l'application
+      	gsCheminDossierHF_DEVGLASS est une chaîne							//Emplacement des fichiers HyperFile de DevGlass de l'appli
+      	gsCheminFichierCommunIni est une chaîne								//Emplacement du fichier ini commun 
+      	gsCheminFichierIniApplication est une chaîne						//Emplacement du fichier ini de l'application
+      		
+      	//Variables Nouvelle gestion Connexion,Société,Utilisateur,Param
+      	gTabConnexion est un tableau de stConnexion
+      	gsNomConnexionHF_commun est une connexion
+      	
+      	gTabSociete est un tableau de stSociete
+      	gSocietesSousTraitance est un tableau de stSociete
+      	gTabParametre est un tableau de StParametre
+      	gSociete est un stSociete
+      	gSte est une stSociete dynamique 
+      	gUtilisateurCourant est un stUtilisateur
+      	
+      	gMode			est un StParametre dynamique
+      	gFraise			est un StParametre dynamique
+      	gParam			est un StParametre dynamique
+      	gPortLecture	est un StParametre dynamique
+      	gRépertoire		est un StParametre dynamique
+      	gFicTemp		est un StParametre dynamique
+      	gFic			est un StParametre dynamique
+      	gSonKO			est un StParametre dynamique
+      	gSonInfo		est un StParametre dynamique
+      	gSonOK			est un StParametre dynamique
+      	gPortEcriture est un entier
+      
+      si pas EnModeService() ALORS
+      	Lancer_version_secours()
+      FIN
+      
+      init_societe_utilisateur_appli()
+      
+     type : 196608
+   -
+     code : |1+
+      trace(gSociete.Num,gSociete.nom)
+     type : 196622
+   -
+     code : |1-
+      
+     type : 196610
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+ code_parameters :
+  internal_properties : BwAAAAcAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : GPAO_V2
+rad :
+ internal_properties : BwAAAAcAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : BwAAAAcAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text :
+      fr-FR : "\"sj"
+     index : 0
+   -
+     text :
+      fr-FR : "\t//2 : Ne pas choisir\r\n\t//3 : "
+     index : 1
+custom_note :
+ internal_properties : BwAAAAcAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

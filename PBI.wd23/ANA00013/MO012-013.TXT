@@ -1,0 +1,4 @@
+//MO012-013.TXT ANA00012 TO ANA00013
+SOCIETES		TAR	231	nouvelle taille enregistrement : 231
+SOCIETES	NUMSOCSYNERGLASS	RUB+		NUMSOCSYNERGLASS est une nouvelle rubrique
+SOCIETES	DIVERS	RUB+		DIVERS est une nouvelle rubrique

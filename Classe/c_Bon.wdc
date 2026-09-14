@@ -1,0 +1,95 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : c_Bon
+ major_version : 27
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1b45be5206fe942c
+ internal_properties : BwAAAAcAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      c_Bon est une Classe
+      	Année est un entier
+      	Bon est un entier
+      	Epure est un booléen
+      	tabLigne est un tableau de c_Ligne
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1965186071931098156
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1965186071931163692
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : LectureFichier
+     procedure_id : 1965186376873913130
+     type_code : 12
+     code : |1-
+      PROCEDURE LectureFichier(xAnnée,xBon)
+      
+      :Année	= xAnnée
+      :Bon	= xBon
+      ret est une chaine
+      
+      nomFic est une chaine = "%1%2_%3.txt"
+      nomFic = ChaîneConstruit(nomFic,gRépertoire.valeur+"\",:Année,Droite("00000"+:Bon,5))
+      
+      //:Epure = LectureEpure(objet)
+      
+      si fFichierExiste(nomFic) alors
+      	txtFic est une chaine = fChargeTexte(nomFic)
+      	uneLigne est une c_Ligne dynamique
+      	valLigne est une chaine
+      	pour toute chaine sc de txtFic séparée par rc
+      		si sc <> "" alors
+      			valLigne = Sansespace(ExtraitChaîne(sc,2,"/"))
+      			
+      			uneLigne = allouer une c_Ligne
+      			uneLigne:Prod		= droite(ExtraitChaîne(sc,1,"/"),4)
+      			uneLigne:Quantité	= gauche(valLigne,4)
+      			pour i = 1 _a_ (taille(valLigne)-4)/5
+      				uneLigne:tab_Cotes[i] = val(valLigne[5+((i-1)*5) sur 5])/10
+      			FIN
+      			TableauAjoute(:tabLigne,uneLigne)
+      		FIn
+      	FIN
+      SINON
+      	SI pas gMode.Valeur = "RR-SOFT" ALORS		
+      		si pas :Epure alors
+      			ret = "ERREUR : Le fichier n'existe pas : " + CheminRéseau(nomFic)
+      		FIN
+      	FIN
+      FIN
+      
+      renvoyer ret
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BwAAAAcAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1b45be4606fb6636
+  internal_properties : BwAAAAcAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BwAAAAcAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
